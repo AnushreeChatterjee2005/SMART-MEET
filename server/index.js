@@ -5,7 +5,9 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import {Server} from 'socket.io';
 import http from 'http';
-import authRoutes from './routes/auth';
+import authRoutes from './routes/auth.js';
+import roomHandler from './socket/roomHandler.js';
+
 
 dotenv.config();
 

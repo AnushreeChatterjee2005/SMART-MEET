@@ -51,6 +51,8 @@ export const AuthContextProvider = ({children}) =>{
     }
 
 
+
+
     const logout = async () =>{
         await localStorage.setItem('userToken', null);
         await localStorage.setItem('userId', null);
@@ -59,6 +61,8 @@ export const AuthContextProvider = ({children}) =>{
         navigate('/');
     }
 
+
+    
 
     return(
         <AuthContext.Provider value={{login, register, logout}}>{children}</AuthContext.Provider>

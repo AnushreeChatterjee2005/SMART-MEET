@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
-import { AuthContextProvider } from './context/AuthContext';
+import { AuthContextProvider } from './context/authContext';
 import {CookiesProvider} from 'react-cookie';
 import { SocketContextProvider } from './context/SocketContext';
 

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState} from 'react';
 import '../styles/Home.css';
-import { AuthContext } from '../context/AuthContext';
+import { AuthContext } from '../context/authContext';
 import { SocketContext } from '../context/SocketContext';
 import {CgEnter} from 'react-icons/cg';
 import {RiVideoAddFill} from 'react-icons/ri';
@@ -50,7 +50,7 @@ const Home = () => {
 
   const {socket, setMyMeets, newMeetType, setNewMeetType} = useContext(SocketContext);
 
-  const userId = localStorage.getItem("userId").toString();
+  const userId = localStorage.getItem("userId")?.toString() || "";
 
   const handleCreateRoom = () =>{
     socket.emit("create-room", {userId, roomName, newMeetType, newMeetDate, newMeetTime});
@@ -78,7 +78,7 @@ const Home = () => {
     })  
   },[socket])
 
-  const userName = localStorage.getItem("userName").toString();
+  const userName = localStorage.getItem("userName")?.toString() || "";
 
 
   return (
